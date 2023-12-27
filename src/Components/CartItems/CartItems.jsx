@@ -71,7 +71,7 @@ export default function CartItems() {
                 <div className="cartItems-promobox">
                     <input type="text" placeholder='Promo Code' onChange={handleChange} />
                     
-                    <button onClick={()=>{memem===true?navigate('/promo'):navigate('/promo2')}}>Submit</button>
+                    <button onClick={()=>{memem()===true?navigate('/promo'):navigate('/promo2')}}>Submit</button>
                 </div>
             </div>
         </div>
