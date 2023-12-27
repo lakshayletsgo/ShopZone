@@ -1,12 +1,23 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import './CartItems.css'
 import { ShopContext } from '../../Context/ShopContext'
 import remove_icon from '../Assets/cart_cross_icon.png'
+import {  useNavigate } from 'react-router-dom';
 export default function CartItems() {
+    const navigate = useNavigate();
     const {all_product,cartItems, removeFromCart,getTotalCartAmount} = useContext(ShopContext);
-    console.log(getTotalCartAmount)
-  return (
-    <div className='cartItems'>
+    const [code,setCode] = useState(" ");
+    const handleChange = event =>{
+        setCode(event.target.value);
+    }
+    const memem = () =>{        
+        if(code==="Lund Lele"||code==="Lund"||code==="lund"||code==="lund lele"||code==="Lund lele"){
+            return true;
+        }
+        return false;
+    }
+    return (
+        <div className='cartItems'>
         <div className="cartItems-format-main">
             <p>Products</p>
             <p>Title</p>
@@ -56,12 +67,12 @@ export default function CartItems() {
             <div className="cartItems-promocode">
                 <p>If you have promo code, Enter it here</p>
                 <div className="cartItems-promobox">
-                    <input type="text" placeholder='Promo Code' />
-                    <button>Submit</button>
+                    <input type="text" placeholder='Promo Code' onChange={handleChange} />
+                    
+                    <button onClick={()=>{memem?navigate('/promo'):navigate('/cart')}}>Submit</button>
                 </div>
             </div>
         </div>
     </div>
-
-  )
+    )
 }

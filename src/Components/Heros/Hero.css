@@ -62,3 +62,14 @@
     justify-content: center;
 }
 
+@media (max-width:768px){
+    .hero{
+        margin-top: 187px;
+    }
+    .hero-latest-btn{
+        height: 100px;
+    }
+    .hero-left{
+        gap: 10px;
+    }
+}

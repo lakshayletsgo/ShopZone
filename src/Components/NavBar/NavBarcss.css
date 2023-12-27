@@ -13,7 +13,7 @@
     gap: 10px;
 }
 .nav-logo p{
-    color: 171717;
+    color: #171717;
     font-size: 30px;
     font-weight: 600;
 }
@@ -77,4 +77,13 @@
     font-size: 14px;
     background: red;
     color: white;
+}
+
+@media (max-width:768px) {
+    .navbar{
+        margin-left:580px ;
+    }
+    .nav-login-cart{
+        margin-left: 100px;
+    }
 }

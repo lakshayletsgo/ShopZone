@@ -24,3 +24,17 @@
     display: flex;
     gap:30px
 }
+
+@media (max-width:768px) {
+    .popular{
+        margin-top: 200px;
+    }
+    .popular-item{
+        margin-top: 50px;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 443px;
+    }
+    
+}
