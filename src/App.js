@@ -11,6 +11,7 @@ import men_banner from './Components/Assets/banner_mens.png'
 import women_banner from './Components/Assets/banner_women.png'
 import kids_banner from './Components/Assets/banner_kids.png'
 import PromoCodem from './Components/PromoCodem/PromoCodem';
+import PromoCodem2 from './Components/PromoCodem/PromoCodem2';
 function App() {
   return (
      <div>
@@ -23,6 +24,7 @@ function App() {
         <Route path='/women' element={<ShopCategory banners = {women_banner}category = "women"/>}/>
         <Route path='/kids' element={<ShopCategory banners = {kids_banner}category = "kids"/>}/>
         <Route path='/promo' element={<PromoCodem/>}/>
+        <Route path='/promo2' element={<PromoCodem2/>}/>
         <Route path='/product' element={<Product/>}>
         <Route path=':productId' element={<Product/>}/>
         </Route>

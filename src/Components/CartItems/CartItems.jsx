@@ -6,15 +6,17 @@ import {  useNavigate } from 'react-router-dom';
 export default function CartItems() {
     const navigate = useNavigate();
     const {all_product,cartItems, removeFromCart,getTotalCartAmount} = useContext(ShopContext);
-    const [code,setCode] = useState(" ");
+    const [code,setCode] = useState("");
     const handleChange = event =>{
         setCode(event.target.value);
     }
     const memem = () =>{        
         if(code==="Lund Lele"||code==="Lund"||code==="lund"||code==="lund lele"||code==="Lund lele"){
             return true;
+        }else{
+
+            return false;
         }
-        return false;
     }
     return (
         <div className='cartItems'>
@@ -69,7 +71,7 @@ export default function CartItems() {
                 <div className="cartItems-promobox">
                     <input type="text" placeholder='Promo Code' onChange={handleChange} />
                     
-                    <button onClick={()=>{memem?navigate('/promo'):navigate('/cart')}}>Submit</button>
+                    <button onClick={()=>{memem===true?navigate('/promo'):navigate('/promo2')}}>Submit</button>
                 </div>
             </div>
         </div>
